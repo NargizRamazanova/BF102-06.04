@@ -1,0 +1,79 @@
+@mixin for-tablet-landscape-up {
+  @media (max-width: 1180px) {
+    @content;
+  }
+}
+
+$color-red: rgb(208, 41, 41);
+$border-color: rgb(57, 10, 10);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 87%;
+  margin: auto;
+}
+nav {
+  padding: 50px 0px;
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 50px;
+      &::after {
+        content: '.';
+        color: $color-red;
+        font-size: 50px;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      @include for-tablet-landscape-up {
+        display: none;
+      }
+      li {
+        border-bottom: 2px solid white;
+        margin-right: 20px;
+        transition: all 0.3s ease;
+        a {
+          text-decoration: none;
+          color: rgb(167, 166, 166);
+          font-size: 25px;
+        }
+        &:hover {
+          border-bottom: 2px solid $border-color;
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+    .btns-wrapper {
+      display: flex;
+      align-items: center;
+      button {
+        padding: 15px 25px;
+        border-radius: 50px;
+        background-color: $color-red;
+        color: white;
+        border: none;
+        font-size: 15px;
+      }
+      i {
+        font-size: 40px;
+        font-weight: bold;
+        display: none;
+        @include for-tablet-landscape-up() {
+          margin-left: 20px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 87%;
+  margin: auto;
+}
+
+nav {
+  padding: 50px 0px;
+}
+nav .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .nav-wrapper h1 {
+  font-size: 50px;
+}
+nav .nav-wrapper h1::after {
+  content: ".";
+  color: rgb(208, 41, 41);
+  font-size: 50px;
+}
+nav .nav-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+@media (max-width: 1180px) {
+  nav .nav-wrapper ul {
+    display: none;
+  }
+}
+nav .nav-wrapper ul li {
+  border-bottom: 2px solid white;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+nav .nav-wrapper ul li a {
+  text-decoration: none;
+  color: rgb(167, 166, 166);
+  font-size: 25px;
+}
+nav .nav-wrapper ul li:hover {
+  border-bottom: 2px solid rgb(57, 10, 10);
+}
+nav .nav-wrapper ul li:hover a {
+  color: black;
+}
+nav .nav-wrapper .btns-wrapper {
+  display: flex;
+  align-items: center;
+}
+nav .nav-wrapper .btns-wrapper button {
+  padding: 15px 25px;
+  border-radius: 50px;
+  background-color: rgb(208, 41, 41);
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+nav .nav-wrapper .btns-wrapper i {
+  font-size: 40px;
+  font-weight: bold;
+  display: none;
+}
+@media (max-width: 1180px) {
+  nav .nav-wrapper .btns-wrapper i {
+    margin-left: 20px;
+    display: inline-block;
+  }
+}/*# sourceMappingURL=style.css.map */
